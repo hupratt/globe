@@ -31,7 +31,7 @@ svg.append("circle")
 
 var rotate = d3_geo_greatArcInterpolator();
 
-d3.json("init.json", function(error, world) {
+d3.json("/static/init.json", function(error, world) {
   var countries = topojson.object(world, world.objects.countries).geometries,
       i = -1,
       n = countries.length;

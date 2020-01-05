@@ -1,11 +1,12 @@
 <html>
-
+{% load static i18n %} 
 <head>
     <meta charset="UTF-8" lang="{{ LANGUAGE_CODE }}" />
     <title>Globe</title>
     <link rel="icon" type="image/webp" href="{%  static 'img' %}" />
     <link rel="stylesheet" href="{% static 'vendor/ionslider/ionslider.css' %}"/>
-    <link rel="stylesheet" href='styles.css'/>
+    <link rel="stylesheet" href="{% static 'styles.css' %}"/>
+    <!-- <link rel="stylesheet" href='styles.css'/> -->
 </head>
 
 <body>
@@ -15,7 +16,7 @@
 
 <script type="text/javascript" src="https://d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript" src="https://d3js.org/topojson.v0.min.js"></script>
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="{% static 'main.js' %}"></script>
 
 </footer>
 
