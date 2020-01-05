@@ -1,3 +1,6 @@
+
+window.addEventListener("load", () => {
+
 var width = 500,
     height = 500;
 
@@ -28,7 +31,7 @@ svg.append("circle")
 
 var rotate = d3_geo_greatArcInterpolator();
 
-d3.json("https://s3-us-west-2.amazonaws.com/s.cdpn.io/95802/world-110m.json", function(error, world) {
+d3.json("init.json", function(error, world) {
   var countries = topojson.object(world, world.objects.countries).geometries,
       i = -1,
       n = countries.length;
@@ -143,3 +146,4 @@ function d3_geo_greatArcInterpolator() {
 
   return interpolate;
 }
+});
